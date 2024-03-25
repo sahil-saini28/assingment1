@@ -70,7 +70,7 @@ function RegisterNewCustomer() {
             className="mb-0 mt-6 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8"
           >
             <p className="text-center text-lg font-medium">
-              Sign in to your account
+            Register here
             </p>
 
             <div>
