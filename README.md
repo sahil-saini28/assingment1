@@ -57,5 +57,5 @@ This is the frontend part of the Telecom Customer Management System, a web appli
    ![User page](https://github.com/sahil-saini28/assingment1/blob/main/pic/User%20page%20.png?raw=true)
   ![Customer page](https://github.com/sahil-saini28/assingment1/blob/main/pic/Register%20page.png?raw=true)
     ![Login page](https://github.com/sahil-saini28/assingment1/blob/main/pic/login%20page%20.png?raw=true)
-
+ ![user data table](https://github.com/sahil-saini28/assingment1/blob/main/pic/customer%20data%20table%20%20page.png?raw=true)
 
