@@ -72,25 +72,29 @@ function CustomersTable() {
               {customers.map((customer, index) => (
                 <tr key={index}>
                   <td className="whitespace-nowrap px-6 py-2 font-medium text-gray-900">
-                    {customer.name}
+                    {customer.name ? customer.name : "N/A"}
                   </td>
                   <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                    {customer.email}
+                    {customer.email ? customer.email : "N/A"}
                   </td>
                   <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                    {customer.plan.name}
+                    {customer.plan ? customer.plan.name : "N/A"}
                   </td>
                   <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                    {customer.dob}
+                    {customer.dob ? customer.dob : "N/A"}
                   </td>
                   <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                    {customer.adharNumber}
+                    {customer.adharNumber ? customer.adharNumber : "N/A"}
                   </td>
                   <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                    {customer.assignedMobileNumber}
+                    {customer.assignedMobileNumber
+                      ? customer.assignedMobileNumber
+                      : "N/A"}
                   </td>
                   <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                    {customer.registrationDate}
+                    {customer.registrationDate
+                      ? customer.registrationDate
+                      : "N/A"}
                   </td>
                 </tr>
               ))}
