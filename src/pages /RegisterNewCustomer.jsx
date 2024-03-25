@@ -1,9 +1,10 @@
 import { useState } from "react";
-
-import { useNavigate } from "react-router-dom";
-
+import { ToastContainer, toast } from "react-toastify";
+// import { useNavigate } from "react-router-dom";
+import "react-toastify/dist/ReactToastify.css";
 function RegisterNewCustomer() {
-  const navigate = useNavigate();
+  // const [display, setDisplay] = useState(false);
+  // const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -33,8 +34,18 @@ function RegisterNewCustomer() {
       );
 
       const data = await response.json();
+      if (data.success === true) {
+        toast("user Created");
+        const id = data.customer._id;
+        console.log(data.customer._id);
+        // Construct the URL with the ID parameter
+        const url = `/plan/${id}`;
+        // Navigate to the URL
+        window.location.href = url;
+      }else{
+        toast(" Wrong Credentials");
+      }
       console.log(data);
-      navigate("/plan");
     } catch (error) {
       console.error("Error:", error);
     }
@@ -42,7 +53,12 @@ function RegisterNewCustomer() {
 
   return (
     <div>
+      {/* {display && (
+          <div>helloe</div>
+      )} */}
+
       <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+      <ToastContainer />
         <div className="mx-auto max-w-lg">
           <h1 className="text-center text-2xl font-bold text-indigo-600 sm:text-3xl">
             Get started today
